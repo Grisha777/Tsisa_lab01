@@ -34,8 +34,8 @@ int64_t Fibonacci(const size_t &n )
 vector<double> Fibonacci_values(double& left, double& right, size_t n)
 {
     vector<double> values;
-    double  x1 = left + (right - left) * Fibonacci(n) / Fibonacci(n + 2);
-    double  x2 = left + right - x1;
+    double  x1 = left + (right - left) * Fibonacci(n-2) / Fibonacci(n);
+    double  x2 = left + (right - left) * Fibonacci(n-1) / Fibonacci(n );
     double  s1 = Function(x1);
     double  s2 = Function(x2);
     while (n--)
@@ -122,4 +122,3 @@ int main()
     PrintPart2(Fibonacci_metod);
     cout<<endl;
 }
-
